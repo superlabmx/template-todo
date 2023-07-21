@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "zip": "rimraf template.zip && rimraf dist && tsc && vite build && cd dist && zip -dg -q -FS -r ../template.zip *"
+    "zip": "rimraf $npm_package_name\"_template\".zip && zip -dg -q -FS -r $npm_package_name\"_template\".zip . -x@.zipignore"
   },
   "dependencies": {
     "querystring": "^0.2.1",
